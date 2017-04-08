@@ -1,0 +1,21 @@
+body {
+  font-family: 'Quattrocento', serif;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5 {
+  font-family: 'Oswald', sans-serif;
+}
+
+a, 
+a:hover, 
+a:active {
+  color: #468ad0;
+}
+
+section {
+  border-bottom: 5px solid black;
+}
