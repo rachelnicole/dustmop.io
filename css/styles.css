@@ -16,6 +16,13 @@ a:active {
   color: #468ad0;
 }
 
+header {
+  z-index: 100;
+}
 section {
   border-bottom: 5px solid black;
+}
+
+section#software {
+    border-bottom: none;
 }
