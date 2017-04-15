@@ -22,7 +22,3 @@ header {
 section {
   border-bottom: 5px solid black;
 }
-
-section#software {
-    border-bottom: none;
-}

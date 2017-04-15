@@ -6,15 +6,18 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/smooth-scroll.min.js"></script>
+
   </head>
   <body>
     <header class="bg-black fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
       <nav class="f6 fw6 ttu tracked">
-        <a class="link white dib mr3" href="#games" title="Games">Games</a>
-        <a class="link white dib mr3" href="#roms" title="ROMs">ROMs</a>
-        <a class="link white dib mr3" href="#software" title="Software">Software</a>
-        <a class="link white dib mr3" href="#scores" title="High Scores">High Scores</a>
-        <a class="link white dib mr3" href="#contact" title="Contact">Contact</a>
+        <a class="link white dib mr3" data-scroll href="#games" title="Games">Games</a>
+        <a class="link white dib mr3" data-scroll href="#roms" title="ROMs">ROMs</a>
+        <a class="link white dib mr3" data-scroll href="#software" title="Software">Software</a>
+        <a class="link white dib mr3" data-scroll href="#scores" title="High Scores">High Scores</a>
+        <a class="link white dib mr3" data-scroll href="/blog" title="Blog">Blog</a>
+        <a class="link white dib mr3" data-scroll href="#contact" title="Contact">Contact</a>
       </nav>
     </header>
     <section class="w-100 pa5 ph5-ns bg-white">
@@ -135,18 +138,24 @@
         </div>
       </article>
     </section>
+    
+    <section class="fl w-100 pa2 ph5-ns" id="scores">
+      <h1 class="f2 lh-copy">High Scores</h1>
 
-    <article class="athelas" id="scores">
-      <div class="vh-100 dt w-100 tc bg-dark-gray white cover o-70" style="background:url(images/gng.jpg) no-repeat center;">
-        <div class="dtc v-mid">
-          <header class="white">
-            <h2 class="f6 fw1 ttu tracked mb2 lh-title">Ghosts n Goblins</h2>
-            <h3 class="f6 fw1 lh-title">December 18th, 2016</h3>
-          </header>
-          <h1 class="f1 f-headline-l fw1 i white">1,129,200</h1>
+      <div class="dt mw12 pt0 pb5 pv5-m pv4-ns">
+        <div class="db dtc-ns v-mid-ns">
+          <img src="images/gng.jpg" alt="Ghosts N' Goblins'" class="w-100 mw7 w7-ns" />
+        </div>
+        <div class="db dtc-ns v-mid ph2 pr0-ns pl3-ns mw6">
+          <h1 class="f3 lh-copy">Ghost n' Goblins</h1>
+          <p class="lh-copy">
+            <h3>1,129,200</h3>
+            Score set in December at Galloping Ghosts Arcade in Illinois. 
+
+          </p>
         </div>
       </div>
-    </article>
+    </section>
 
     <footer class="pa4 pa5-l black-70 bt b--black-10" id="contact">
       <div class="mb4-l cf">
@@ -191,6 +200,14 @@
         </p>
       </div>
     </footer>
-
+  <script>
+    smoothScroll.init({
+      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+      speed: 500, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+      offset: 80, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+    });
+  </script>
   </body>
 </html>
